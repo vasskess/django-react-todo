@@ -21,7 +21,7 @@ class TodoNoteListCreate(gsc.ListCreateAPIView):
 
     def perform_create(self, serializer):
         if serializer.is_valid():
-            serializer.save(user=serializer.request.user)
+            serializer.save(author=self.request.user)
         else:
             print(serializer.errors)
 
