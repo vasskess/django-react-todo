@@ -49,12 +49,12 @@ function Home() {
     return (
         <div>
             <div>
-                <h2>Notes</h2>
+                <p className='info-text'>My Notes</p>
                 {notes.map((note) => (
                     <Note note={note} onDelete={deleteNote} key={note.id} />
                 ))}
             </div>
-            <h2>Create a Note</h2>
+            <h2 className='info-text'>Create a Note</h2>
             <form onSubmit={createNote}>
                 <label htmlFor="title">Title:</label>
                 <br />
@@ -78,6 +78,9 @@ function Home() {
                 <br />
                 <input type="submit" value="Submit"></input>
             </form>
+            <footer className="footer">
+                <p><span id="date">2024 &copy; </span>Designed & Coded by Vasil Rangelov. All Rights Reserved</p>
+            </footer>
         </div>
     );
 }
