@@ -14,26 +14,26 @@
 } 
 
 .note-title {
-    color: #333;
+    color: hsl(326, 44%, 18%);
     display: flex;
     justify-content: center;
 }
 
 .note-content {
-    color: #666;
+    color: hsl(325, 66%, 25%);
     display: flex;
     justify-content: center;
 }
 
 .note-date {
-    color: #999;
-    font-size: 0.8rem;
+    color: #000;
+    font-size: 1rem;
     display: flex;
     justify-content: flex-end;
 }
 
 .delete-button {
-    background-color: #f44336; 
+    background-color: hsl(325, 66%, 25%); 
     color: white;
     border: none;
     padding: 10px 20px;
@@ -43,5 +43,5 @@
 }
 
 .delete-button:hover {
-    background-color: #d32f2f;
+    background-color: hsl(341 ,64%, 55%);
 }

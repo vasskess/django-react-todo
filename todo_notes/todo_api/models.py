@@ -4,7 +4,7 @@ from django.contrib.auth.models import User
 
 class TodoNote(models.Model):
     TITLE_LENGTH = 100
-    CONTETN_LENGTH = 550
+    CONTETN_LENGTH = 1550
 
     title = models.CharField(max_length=TITLE_LENGTH)
     content = models.TextField(max_length=CONTETN_LENGTH)
