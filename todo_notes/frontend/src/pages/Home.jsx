@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { ACCESS_TOKEN } from '../constants'
 import api from '../todo_api'
 import Note from '../components/Note'
 import '../styles/Home.css'
@@ -7,6 +9,7 @@ function Home() {
     const [notes, setNotes] = useState([]);
     const [content, setContent] = useState('');
     const [title, setTitle] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         getNotes();
@@ -46,8 +49,14 @@ function Home() {
             .catch((err) => alert(err));
     };
 
+    const handleLogout = () => {
+        localStorage.setItem(ACCESS_TOKEN, null);
+        navigate('/login');
+      };
+
     return (
         <div>
+            <button className='logout-button' onClick={handleLogout}>Logout</button>
             <div>
                 <p className='info-text'>My Notes</p>
                 {notes.map((note) => (
